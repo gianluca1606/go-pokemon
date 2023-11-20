@@ -1,0 +1,25 @@
+<!-- Pokémon Card -->
+<div class="max-w-md mx-auto bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg">
+    <img class="object-cover" src="{{ .Sprites.Other.Home.FrontDefault }}" alt="{{ .Name }} Image">
+    <div class="p-4">
+        <h2 class="text-2xl font-semibold text-gray-200">{{ .Name }}</h2>
+        <p class="text-sm text-gray-300">ID: {{ .ID }}</p>
+        <div class="mt-4">
+            <p class="text-base text-gray-400">Abilities:</p>
+            <ul class="list-disc pl-6">
+                {{ range .Abilities }}
+                <li>{{ .Ability.Name }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="mt-4">
+            <p class="text-base text-gray-400">Types:</p>
+            <ul class="list-disc pl-6">
+                {{ range .Types }}
+                <li>{{ .Type.Name }}</li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Pokémon Card -->
